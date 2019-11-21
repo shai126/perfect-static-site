@@ -1,0 +1,12 @@
+[build]
+  base = ""
+  publish = "public/"
+  command = "npm run staging"
+
+[context.production]
+  command = "npm run production"
+
+# [[redirects]]
+#   from = "/*"
+#   to = "https://old-fallback-site-while-migrating.com/:splat"
+#   status = 200

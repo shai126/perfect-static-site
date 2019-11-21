@@ -1,0 +1,21 @@
+{
+  "scripts": {
+    "serve": "bundle exec jekyll b --watch & cross-env NODE_ENV=development concurrently \"postcss front/main.css -o public/css/main.css --watch\"  \"live-server ./public\"",
+    "forestry-serve": "bundle exec jekyll b --watch --drafts --unpublished --future & cross-env concurrently \"postcss front/main.css -o public/css/main.css --watch\"  \"live-server --host=0.0.0.0 --port=8080 ./public\"",
+    "development": "JEKYLL_ENV=development bundle exec jekyll b; cross-env NODE_ENV=development postcss front/main.css -o public/css/main.css",
+    "staging":     "JEKYLL_ENV=staging     bundle exec jekyll b; cross-env NODE_ENV=staging     postcss front/main.css -o public/css/main.css",
+    "production":  "JEKYLL_ENV=production  bundle exec jekyll b; cross-env NODE_ENV=production  postcss front/main.css -o public/css/main.css"
+  },
+  "dependencies": {
+    "autoprefixer": "^9.5.1",
+    "tailwindcss": "^1.0"
+  },
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^1.2.0",
+    "concurrently": "^4.1.0",
+    "cross-env": "^5.2.0",
+    "cssnano": "^4.1.10",
+    "live-server": "^1.2.1",
+    "postcss-cli": "^6.1.2"
+  }
+}

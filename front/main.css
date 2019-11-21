@@ -1,0 +1,30 @@
+@tailwind base;
+
+h1 {
+    @apply font-light text-2xl text-gray-900 mb-4;
+}
+h2 {
+    @apply mb-2 text-xl;
+}
+h3 {
+    @apply text-lg;
+}
+a {
+    @apply text-blue-600 underline;
+}
+
+@screen sm {
+    h1 {
+        @apply text-3xl;
+    }
+}
+
+@screen md {
+    h1 {
+        @apply text-4xl;
+    }
+}
+
+@tailwind components;
+
+@tailwind utilities;
